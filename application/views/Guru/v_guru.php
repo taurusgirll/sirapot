@@ -53,9 +53,9 @@
                 <th>Alamat</th>
                 <th>Telepon</th>
                 <th>Agama</th>
-                <th>TTL</th>
+                <th width="30%">Temp,Tgl lahir</th>
                 <th>NIP</th>
-                <th width="17%">Opsi</th>
+                <th width="17%">Aksi</th>
              </tr>
         </thead>
 <?php 
@@ -154,6 +154,8 @@ if ($u->jenis_kelamin =="L"){
 
     </div>
 </form>
+
+</div>
 
 </div>
 <!-- End of Content Wrapper -->

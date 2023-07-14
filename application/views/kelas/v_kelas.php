@@ -30,10 +30,13 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
     <h7 class="m-0 font-weight-bold text-primary float-right" >Data Kelas</h7>
-    <button type ="button" class="btn btn-sm btn-primary btn-icon-split" data-toggle="modal" data-target="#modal_add"> <span class="icon text-white-50">
-                                            <i class="fa-solid fa-notes-medical"></i>
+  
+                                        <a href="<?php echo base_url('index.php/kelas/tambah');?>" class="btn btn-sm btn-primary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                        <i class="fa-solid fa-notes-medical"></i>
                                         </span>
-                                        <span class="text font-weight-bold">Tambah Data</span></button>
+                                        <span class="text font-weight-bold">Tambah Data</span>
+                                    </a>
                                         <a href="<?php echo base_url('index.php/ControllerPdfGuru/index');?>" target="_blank" class="btn btn-sm btn-info btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fa fa-download"></i>
@@ -42,9 +45,7 @@
                                     </a>
     </div>
     <div class="card-body">
-    <a href="<?php echo base_url('index.php/kelas/tambah');?>" class='btn btn-sm 
-    btn-primary pull-right'><i class="fa-solid fa-notes-medical"></i>Kelas Baru</a>
-    
+
         <div class="table-responsive">
         <table class="table table-bordered  table-hover table-striped" id="dataTable" width="100%" cellspacing="0">
             <thead class="thead-striped">

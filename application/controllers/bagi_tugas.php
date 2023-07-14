@@ -62,22 +62,22 @@ function __construct(){
 			redirect('index.php/bagi_tugas');
 			}
 	
-		function hapus($id_mapel){
-				$where = array('id_mapel' => $id_mapel);
+		function hapus($id_petugas){
+				$where = array('id_petugas' => $id_petugas);
 				$this->M_bagi_tugas->delete_data($where,'bagi_tugas');
 				redirect('index.php/bagi_tugas');
 				}
-		function edit($id_mapel){
+		function edit($id_petugas){
 			$this->load->view('template/header');
         			$this->load->view('template/wrapper');
         			$this->load->view('template/navbar');
-					$where = array('id_mapel' => $id_mapel);
+					$where = array('id_petugas' => $id_petugas);
 					$data['bagi_tugas'] = $this->M_bagi_tugas->edit_data($where,'bagi_tugas')->result();
 					$this->load->view('bagi_tugas/v_edit',$data);
 					$this->load->view('template/footer');
 		}
 		function update(){
-			$id_mapel = $this->input->post('id_mapel');
+			$id_petugas = $this->input->post('id_petugas');
 			$nama_mapel = $this->input->post('nama_mapel');
 			$semester = $this->input->post('semester');
 			$no_urut = $this->input->post('no_urut');
@@ -87,7 +87,7 @@ function __construct(){
 			'no_urut' => $no_urut,
 			);
 			$where = array(
-			'id_mapel' => $id_mapel
+			'id_petugas' => $id_petugas
 			);
 			$this->M_bagi_tugas->update_data($where,$data,'bagi_tugas');
 			redirect('index.php/bagi_tugas');

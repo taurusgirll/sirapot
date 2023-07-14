@@ -109,13 +109,17 @@
         <button type="submit" class="btn  btn-primary">Kirim</button>
 
 
-
+        </div>
 
     </div>
 </form>
         
 
 </div>
+
+</div>
+
+
 <!-- End of Content Wrapper -->
 
 </div>

@@ -27,6 +27,7 @@
 			</form>
 		</div>
 	</div>
+	</div>
 </div><br>
 
 <!-- DataTales Example -->
@@ -72,7 +73,7 @@
 <th>Agama</th>
 <th>Telp</th>
 <th>Alamat</th>
-<th width="17%">Opsi</th>
+<th width="30%">Aksi</th>
 </tr>
 </thead>
 <tbody>

@@ -34,7 +34,7 @@
                                             <i class="fa-solid fa-notes-medical"></i>
                                         </span>
                                         <span class="text font-weight-bold">Tambah Data</span></button>
-                                        <a href="<?php echo base_url('index.php/ControllerPdfGuru/index');?>" target="_blank" class="btn btn-sm btn-info btn-icon-split">
+                                        <a href="<?php echo base_url('index.php/pdfekskul/index');?>" target="_blank" class="btn btn-sm btn-info btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fa fa-download"></i>
                                         </span>

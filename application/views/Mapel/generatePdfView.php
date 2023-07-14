@@ -1,8 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <title>Pdf Mapel</title>
+    <center><h1>Data Mapel</h1></center>
 <div class="card-body">
-<div class="table-responsive">
- <table class="table table-striped" border="1" id="dataTable" width="100%" cellspacing="0">
-    <thead class="bg-secondary text-light">
- <thead>
+        <div class="table-responsive">
+        <table class="table table-striped" border="1" id="dataTable" width="100%">
+            <thead class="bg-secondary text-light">
+                <thead>
  <tr>
  <th width="10%">No</th>
  <th>Kd Mapel</th>

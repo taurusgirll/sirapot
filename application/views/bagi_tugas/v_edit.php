@@ -1,48 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="<?= base_url();?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" 
-href="http://localhost/app_rpltwo/assets/css/input.css">
 
-
-</head>
-<body>
-   
-<form class="modal-content animate" action="<?php echo base_url(). 'index.php/from_rapot/update'; ?>" method="post">
-<?php foreach($from_rapot as $u){ ?>
-    <div class="imgcontainer">
-    <a href=http://[::1]/app_rpltwo/index.php/from_rapot><span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span></a>
-    
-  </div>
-    <div class="container">
-    <center><h1> Edit Data</h1></center>
-      <hr>
-    
-    <input type="hidden" name="id_mapel" value="<?php 
-    echo $u->id_mapel ?>">
+<div class= "tabel1">
+<div class="container">
+ <div class="card">
+ <div class="card-header text-center">
+ <h4>Edit Data</h4>
+ </div>
+ <div class="card-body">
+ <a href="<?php echo base_url().'index.php/dudi/' ?>" class='btn btn-sm btn-light btn-outline-dark pull-right'><i class="fa fa-arrow-left"></i> Kembali</a>
+ <br/>
+ <br/>
+ <form action="<?php echo base_url(). 'index.php/bagi_tugas/update'; ?>" class="container my-6" method="POST" id="myForm">
+ <?php foreach($bagi_tugas as $u){ ?>
+             
+  <input type="hidden" name="id_petugas" value="<?php 
+    echo $u->id_petugas ?>">
 
 
  
 
-    <label for="psw"><b>Nama mapel</b></label>
-    <input type="text"  class="form-control" name="nama_mapel" value="<?php 
-    echo $u->nama_mapel ?>"required><br>
+    <label for="kd_mapel"><b>Nama mapel</b></label>
+    <input type="text"  class="form-control" name="kd_mapel" value="<?php 
+    echo $u->kd_mapel ?>"required><br>
 
-    <label for="psw"><b>Semester</b></label>
+    <label for="psw"><b>Id Kelas</b></label>
+    <input type="text"  class="form-control" name="id_kelas"  value="<?php 
+    echo $u->id_kelas ?>" required><br>
+
+<label for="psw"><b>Semester</b></label>
     <input type="text"  class="form-control" name="semester"  value="<?php 
     echo $u->semester ?>" required><br>
-
-<label for="psw"><b>No urut</b></label>
-    <input type="text"  class="form-control" name="no_urut"  value="<?php 
-    echo $u->no_urut ?>" required><br>
         
       
-        <button type="submit" class="btnkirim">Kirim</button>
     </div>
-  </form>
+</form>
 <?php } ?>
+ </div>
+ </div>
 </div>
-</body>
-</html>
+ </div>

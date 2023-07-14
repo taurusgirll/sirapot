@@ -1,31 +1,20 @@
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="<?= base_url();?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" 
-href="http://localhost/app_rpltwo/assets/css/input.css">
 
-<link rel="stylesheet" type="text/css" 
-href="http://localhost/app_rpltwo/assets/css/select.css">
-
-</head>
-<body>
-
-  
-<form class="modal-content animate" action="<?php echo base_url(). 'index.php/dudi/update_dudi'; ?>" method="post">
-<?php foreach($dudi as $u){ ?>
-<div class="imgcontainer">
-    <a href=/app_rpltwo/index.php/dudi> <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span></a>
-      <img src="<?=base_url('/assets/img/img_avatar2.png');?>" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-
-    
+<div class= "tabel1">
+<div class="container">
+ <div class="card">
+ <div class="card-header text-center">
+ <h4>Edit Data</h4>
+ </div>
+ <div class="card-body">
+ <a href="<?php echo base_url().'index.php/dudi/' ?>" class='btn btn-sm btn-light btn-outline-dark pull-right'><i class="fa fa-arrow-left"></i> Kembali</a>
+ <br/>
+ <br/>
+ <form action="<?php echo base_url(). 'index.php/dudi/update_dudi'; ?>" class="container my-6" method="POST" id="myForm">
+ <?php foreach($dudi as $u){ ?>
+             
       <input type="hidden" name="id" value="<?php 
        echo $u->id ?>">
 
@@ -60,21 +49,15 @@ href="http://localhost/app_rpltwo/assets/css/select.css">
 <label for="tgl_keluar"><b>Tanggal Keluar</b></label>
         <input type="date" class="form-control" name="tgl_keluar"  value="<?php 
     echo $u->tgl_keluar ?>" required><br>
+        <button type="submit" class="btn  btn-primary">Kirim</button>
 
-<button type="submit" class="btnkirim">Kirim</button>
 
+
+
+    </div>
+</form>
+<?php } ?>
+ </div>
+ </div>
 </div>
-
-<div class="container" style="background-color:#f1f1f1">
-<a href=/app_rpl2/index.php/guru>  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button></a>
-  
-  
-</div>
-   
-    
-  </form>
-  <?php } ?>
-</div>
-
-</body>
-</html>
+ </div>

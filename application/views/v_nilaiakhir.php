@@ -41,6 +41,9 @@ include('template/navbar.php');
  <div class="form-group">
  <label class="font-weight-bold" for="nama">Mapel</label>
  <select class="form-control" name="mapel" id="mapel" aria-label="Default select example">
+  <option selected>Pilih mapel </option> <?php foreach ($mapel as $j) {
+      echo '<option value="' . $j->id_mapel . '">' . $j->nama_mapel . '</option>';
+  } ?>
 </select>
  </div>
 
@@ -90,31 +93,31 @@ $(document).ready(function(){
 	// 	})
 	// return false ;
 	// });
-  $('#kelas').change(function(){
-		var semester = $('#semester').val();
-    var kelas = $('#kelas').val();
+//   $('#kelas').change(function(){
+// 		var semester = $('#semester').val();
+//     var kelas = $('#kelas').val();
 		
-		$.ajax({
-			url:"<?php echo base_url('index.php/Nilai_akhir/get_mapel');?>",
-			method : "POST",
-			data : {kelas: kelas},
-			async : true,
-			dataType : 'json',
-			success:function(data){
-				console.log(data);
+// 		$.ajax({
+// 			url:"<?php echo base_url('index.php/Nilai_akhir/get_mapel');?>",
+// 			method : "POST",
+// 			data : {kelas: kelas},
+// 			async : true,
+// 			dataType : 'json',
+// 			success:function(data){
+// 				console.log(data);
                 
-				var html = '';
-				var i;
-                html += '<option value=>pilih mapel</option>';
-				for(i=0; i<data.length; i++){
-					html += '<option value='+data[i].kd_mapel+'>'+data[i].nama_mapel+'</option>';
-				}				
-				$('#mapel').html(html);
-				//$('#kelas').change();
-			}
-		})
-	return false ;
-	});
+// 				var html = '';
+// 				var i;
+//                 html += '<option value=>pilih mapel</option>';
+// 				for(i=0; i<data.length; i++){
+// 					html += '<option value='+data[i].kd_mapel+'>'+data[i].nama_mapel+'</option>';
+// 				}				
+// 				$('#mapel').html(html);
+// 				//$('#kelas').change();
+// 			}
+// 		})
+// 	return false ;
+// 	});
   $('#mapel').change(function(){
 		var semester = $('#semester').val();
     var kelas = $('#kelas').val();

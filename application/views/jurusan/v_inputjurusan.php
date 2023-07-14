@@ -12,7 +12,6 @@ href="http://localhost/app_rpltwo/assets/css/input.css">
   <form class="modal-content animate" action="<?php echo base_url(). 'index.php/jurusan/tambah_aksi'; ?>" method="post">
     <div class="imgcontainer">
     <a href=/app_rpltwo/index.php/jurusan><span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span></a>
-
     </div>
 
     <div class="container">  
@@ -29,16 +28,26 @@ href="http://localhost/app_rpltwo/assets/css/input.css">
 
         <button type="submit" class="btnkirim">Kirim</button>
 
+        </div>
 
-</div>
 </form>
 
 
 
 
 </div>
+
+
+</div>
+
+
+</div>
 <!-- /.container-fluid -->
 
+</div>
+
+</div>
+</div>
 </div>
 <!-- End of Main Content -->
 
@@ -48,5 +57,3 @@ href="http://localhost/app_rpltwo/assets/css/input.css">
 
 </div>
 <!-- End of Page Wrapper -->
-</body>
-</html>
