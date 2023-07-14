@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class siswa extends CI_Controller {
 	function __construct(){
 		parent::__construct();
-	$this->load->model('m_siswa');
+	$this->load->model('M_data');
 $this->load->helper('url');
 	}
 	/**
@@ -24,7 +24,7 @@ $this->load->helper('url');
 	 */
 	public function index()
 	{
-		$data['siswa'] = $this->m_siswa->get_data('siswa')->result();
+		$data['siswa'] = $this->M_data->get_data('siswa')->result();
         $this->load->view('template/header');
         $this->load->view('template/wrapper');
         $this->load->view('template/navbar');
@@ -82,13 +82,14 @@ $this->load->helper('url');
 				'pekerjaan_ayah' => $pekerjaan_ayah,
 				'alamat_orang_tua' => $alamat_orang_tua
 				);
-				$this->m_siswa->insert_data($data,'siswa');
+				$this->M_data->insert_data($data,'siswa');
+				$this->session->set_flashdata('success', 'Tambah Data Sukses');
 				redirect('index.php/siswa');
 				}      
 	function edit_siswa($id_siswa){
 		$where = array('id_siswa' => $id_siswa);
 		// mengambil data dari database sesuai id_siswa
-		$data['siswa'] = $this->m_siswa->edit_data($where,'siswa')->result();
+		$data['siswa'] = $this->M_data->edit_data($where,'siswa')->result();
 		$this->load->view('template/header');
         $this->load->view('template/wrapper');
         $this->load->view('template/navbar');
@@ -140,7 +141,7 @@ $this->load->helper('url');
 					$where = array(
 						'id_siswa' => $id_siswa
 						);
-					$this->m_siswa->update_data($where,$data,'siswa');
+					$this->M_data->update_data($where,$data,'siswa');
 					redirect('index.php/siswa');
 					}    
 					function hapus_siswa($id_siswa){
@@ -148,8 +149,9 @@ $this->load->helper('url');
 						'id_siswa' => $id_siswa
 						);
 						// menghapus data buku dari database sesuai id
-						$this->m_siswa->delete_data($where,'siswa');
+						$this->M_data->delete_data($where,'siswa');
 						// mengalihkan halaman ke halaman data buku
 						redirect(base_url().'index.php/siswa');
 						}
+					
 }

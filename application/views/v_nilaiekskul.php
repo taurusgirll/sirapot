@@ -10,7 +10,7 @@ include('template/navbar.php');
 <div class="container">
  <div class="card">
  <div class="card-header text-center">
- <h4>Tambah Data Nilai Akhir </h4>
+ <h4>Nilai Ekstrakulikuler </h4>
  </div>
  <div class="card-body">
  <a href="<?php echo base_url().'index.php/nilai_ekskul/' ?>" class='btn btn-sm btn-light btn-outline-dark pull-right'><i class="fa fa-arrow-left"></i> Kembali</a>
@@ -30,8 +30,11 @@ include('template/navbar.php');
  </div>
 
 <div class="form-group">
- <label class="font-weight-bold" for="nama">Kelas</label>
+<label class="font-weight-bold" for="nama">Kelas</label>
  <select class="form-control" name="kelas" id="kelas" aria-label="Default select example">
+  <option selected>Pilih kelas </option> <?php foreach ($kelas as $j) {
+      echo '<option value="' . $j->id_kelas . '">' . $j->nama_kelas . '</option>';
+  } ?>
 </select>
  </div>
 
@@ -61,32 +64,32 @@ include('template/navbar.php');
 ?>
 <script language="javascript">
 $(document).ready(function(){
-	$('#semester').change(function(){
-		var semester = $('#semester').val();
-        // console.log('halo');
-        // alert(semester);
+	// $('#semester').change(function(){
+	// 	var semester = $('#semester').val();
+    //     // console.log('halo');
+    //     // alert(semester);
 		
-		$.ajax({
-			url:"<?php echo base_url('index.php/nilai_ekskul/get_kelas');?>",
-			method : "POST",
-			data : {semester: semester},
-			async : true,
-			dataType : 'json',
-			success:function(data){
-				console.log(data);
+	// 	$.ajax({
+	// 		url:"<?php echo base_url('index.php/nilai_ekskul/get_kelas');?>",
+	// 		method : "POST",
+	// 		data : {semester: semester},
+	// 		async : true,
+	// 		dataType : 'json',
+	// 		success:function(data){
+	// 			console.log(data);
                 
-				var html = '';
-				var i;
-                 html += '<option value=>pilih kelas</option>';
-				for(i=0; i<data.length; i++){
-					html += '<option value='+data[i].id_kelas+'>'+data[i].nama_kelas+'</option>';
-				}				
-				$('#kelas').html(html);
-				$('#kelas').change();
-			}
-		})
-	return false ;
-	});
+	// 			var html = '';
+	// 			var i;
+    //              html += '<option value=>pilih kelas</option>';
+	// 			for(i=0; i<data.length; i++){
+	// 				html += '<option value='+data[i].id_kelas+'>'+data[i].nama_kelas+'</option>';
+	// 			}				
+	// 			$('#kelas').html(html);
+	// 			$('#kelas').change();
+	// 		}
+	// 	})
+	// return false ;
+	// });
   $('#kelas').change(function(){
 		var semester = $('#semester').val();
     var kelas = $('#kelas').val();

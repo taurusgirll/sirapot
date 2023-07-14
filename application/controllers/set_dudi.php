@@ -30,12 +30,12 @@ function tambah(){
         $id = $this->input->post('id');
         $id_setdudi = $this->input->post('id_setdudi');
         $nama_pembimbing = $this->input->post('nama_pembimbing');
-        $nama_jurusan = $this->input->post('nama_jurusan');
+        $jurusan = $this->input->post('jurusan');
         $data = array(
         'id' => $id,
         'id_setdudi' => $id_setdudi,
         'nama_pembimbing' => $nama_pembimbing,
-        'nama_jurusan' => $nama_jurusan
+        'jurusan' => $jurusan
         );
         $this->m_set_dudi->insert_data($data,'set_dudi');
         redirect('index.php/set_dudi');

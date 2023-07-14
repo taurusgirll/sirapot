@@ -38,7 +38,7 @@ include('template/navbar.php');
  <div class="form-group">
  <label class="font-weight-bold" for="nama">Mapel</label>
  <select class="form-control" name="id_mapel" aria-label="Default select example">
-  <option selected>Pilih Guru</option>
+  <option selected>Pilih mapel</option>
   <?php foreach ($mapel as $j) {
       echo '<option value="' . $j->id_mapel . '">' . $j->nama_mapel . '</option>';
   } ?>

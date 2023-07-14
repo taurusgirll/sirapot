@@ -3,13 +3,18 @@ class Nilai_ekskul extends CI_Controller{
 function __construct(){
 parent::__construct();
 $this->load->model('M_nilaiekskul');
+$this->load->model('M_kelas');
 }
 
 public function index()
 	{
-    $semester=$this->db->query('select semester from bagi_tugas group by semester')->result();
-    $data ['semester'] = $semester;
-	$this->load->view('v_nilaiekskul',$data);
+      
+        $kelas=$this->db->query('select * from bagi_tugas a join kelas b on(a.id_kelas=b.id_kelas)')->result();
+        $data ['bagi_tugas'] = $kelas;
+        $data['kelas'] = $this->M_kelas->get_data()->result();
+        $semester=$this->db->query('select semester from bagi_tugas group by semester')->result();
+        $data ['semester'] = $semester;
+		$this->load->view('v_nilaiekskul',$data);
 	}
 function get_kelas(){
         $semester=$this->input->post('semester');

@@ -1,7 +1,7 @@
 <?php 
-class M_from_rapot extends CI_Model{
+class M_bagi_tugas extends CI_Model{
 function get_data(){
-return $this->db->get('from_rapot');
+return $this->db->get('bagi_tugas');
 }
 function insert_data($data,$table){
 $this->db->insert($table,$data);

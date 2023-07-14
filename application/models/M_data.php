@@ -5,8 +5,8 @@
 class M_data extends CI_Model{
 // FUNGSI CRUD
 // fungsi untuk mengambil data dari database
-function get_data(){
-return $this->db->get('kelas');
+function get_data($table){
+return $this->db->get($table);
 }
 // fungsi untuk menginput data ke database
 function insert_data($data,$table){

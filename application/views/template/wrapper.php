@@ -49,7 +49,7 @@
                         <a class="collapse-item" href="<?php echo base_url('index.php/mapel');?>">Mapel</a>
                         <a class="collapse-item" href="<?php echo base_url('index.php/ekskul');?>">Ekstrakurikuler</a>
                         <a class="collapse-item" href="<?php echo base_url('index.php/dudi');?>">DuDi</a>
-                        <a class="collapse-item" href="<?php echo base_url('index.php/from_rapot');?>">Form Rapot</a>
+                        <a class="collapse-item" href="<?php echo base_url('index.php/bagi_tugas');?>">Bagi Tugas</a>
                        
                      
                        
@@ -88,7 +88,7 @@
                         <a class="collapse-item" href="<?php echo base_url('index.php/nilai_akhir');?>">Nilai Akhir</a>
                         <a class="collapse-item" href="<?php echo base_url('index.php/nilai_kehadiran');?>">Nilai Kehadiran</a>
                         <a class="collapse-item" href="<?php echo base_url('index.php/Nilai_ekskul');?>">Nilai Ekskul</a>
-                        <a class="collapse-item" href="<?php echo base_url('index.php/guru');?>">Nilai Sikap</a>
+                        <a class="collapse-item" href="<?php echo base_url('index.php/sikap');?>">Nilai Sikap</a>
                         <a class="collapse-item" href="<?php echo base_url('index.php/prakerin');?>">Nilai Prakerin</a>
                         <a class="collapse-item" href="<?php echo base_url('index.php/catatan_walikelas');?>">Catatan Walikelas</a>
                     </div>

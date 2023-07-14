@@ -1,8 +1,6 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
-<!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Data Pembina Ekstrakurikuler</h1>
 
         <div class="container">
 	<div class="row" style="margin-top: 30px;">
@@ -19,8 +17,8 @@
 				<div>
 					<button class='btn btn-success' type="submit">
 						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			    		Import		
-					</button>
+						<span class="text font-weight-bold">Import</span></button>
+
 				</div>
 			</form>
 		</div>
@@ -30,11 +28,21 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-    <a href="<?php echo base_url('index.php/SetPembinaEkskul/tambah');?>" class='btn btn-sm 
-    btn-primary pull-right'><i class="fa-solid fa-notes-medical"></i>Pembina Baru</a>
-    
-    <a href="<?php echo base_url('index.php/GeneratePdfController/index');?>" class='btn btn-sm 
-    btn-danger pull-right'><i class="fas fa-user-plus"></i>Pdf</a>
+	<h7 class="m-0 font-weight-bold text-primary float-right" >Pembina Ekstrakurikuler</h7>
+  
+  <a href="<?php echo base_url('index.php/SetPembinaEkskul/tambah');?>" class="btn btn-sm btn-primary btn-icon-split">
+  <span class="icon text-white-50">
+  <i class="fa-solid fa-notes-medical"></i>
+  </span>
+  <span class="text font-weight-bold">Tambah Data</span>
+</a>
+  <a href="<?php echo base_url('index.php/GeneratePdfController/index');?>" target="_blank" class="btn btn-sm btn-info btn-icon-split">
+  <span class="icon text-white-50">
+	  <i class="fa fa-download"></i>
+  </span>
+  <span class="text font-weight-bold">PDF</span>
+</a>      
+   
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -45,7 +53,7 @@
 <th>Nama Ekstrakurikuler</th>
 <th>Nama Pembina</th>
 <th>semester</th>
-<th>Opsi</th>
+<th width="15%"><center>Aksi</center></th>
 </tr>
 </thead>
 <tbody>
@@ -60,10 +68,15 @@ foreach ($ekskul as $p){
 <td><?php echo $p->nama_pembina?></td>
 <td><?php echo $p->semester ?></td>
 <td>
-<a href="<?php echo base_url().'index.php/SetPembinaEkskul/edit/'.$p->id; ?>" 
-class="btn btn-sm btn-warning"><i class="fas fa-user-edit"></i> Edit</a>
-<a href="<?php echo base_url().'index.php/SetPembinaEkskul/hapus_pembina/'.$p->id; ?>" 
-class="btn btn-sm btn-success"><i class="fa fa-trash"></i> Hapus</a>
+<center>
+<a href="<?php echo base_url().'index.php/SetPembinaEkskul/edit/'.$p->id; ?>" title ="Edit" class="btn btn-primary btn-circle btn-sm">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a href="<?php echo base_url().'index.php/SetPembinaEkskul/hapus_pembina/'.$p->id; ?>" title ="Hapus" class="btn btn-danger btn-circle btn-sm">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                    </center>
+
 </td>
 </tr>
 <?php } ?>
